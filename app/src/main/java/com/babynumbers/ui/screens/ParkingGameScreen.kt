@@ -213,7 +213,7 @@ fun ParkingGameScreen(
 
                         Box(
                             modifier = Modifier
-                                .size(200.dp, 180.dp)
+                                .size(220.dp, 180.dp)
                                 .scale(scale)
                                 .shadow(
                                     elevation = if (isSelected) 28.dp else 6.dp,
@@ -241,14 +241,14 @@ fun ParkingGameScreen(
                             Text(
                                 text = englishNumbers[car.number] ?: car.number.toString(),
                                 style = MaterialTheme.typography.titleLarge.copy(
-                                    fontSize = 22.sp,
+                                    fontSize = 36.sp,
                                     fontWeight = FontWeight.Bold
                                 ),
                                 color = if (isSelected) MintGreen else DeepBrownGray,
                                 textAlign = TextAlign.Center,
                                 modifier = Modifier
                                     .align(Alignment.BottomCenter)
-                                    .padding(bottom = 12.dp)
+                                    .padding(bottom = 8.dp)
                             )
                             // 选中高亮边框 - 强对比
                             if (isSelected) {
@@ -288,7 +288,7 @@ fun ParkingGameScreen(
                     uiState.spots.forEach { spot ->
                         Box(
                             modifier = Modifier
-                                .size(200.dp, 180.dp)
+                                .size(220.dp, 180.dp)
                                 .shadow(6.dp, RoundedCornerShape(16.dp))
                                 .clip(RoundedCornerShape(16.dp))
                                 .background(
@@ -319,7 +319,7 @@ fun ParkingGameScreen(
                                     Text(
                                         text = "✓",
                                         style = MaterialTheme.typography.headlineLarge.copy(
-                                            fontSize = 56.sp,
+                                            fontSize = 64.sp,
                                             fontWeight = FontWeight.Bold
                                         ),
                                         color = MintGreen
@@ -330,7 +330,7 @@ fun ParkingGameScreen(
                                 Text(
                                     text = spot.number.toString(),
                                     style = MaterialTheme.typography.headlineLarge.copy(
-                                        fontSize = 52.sp,
+                                        fontSize = 60.sp,
                                         fontWeight = FontWeight.Bold
                                     ),
                                     color = DeepBrownGray.copy(alpha = 0.5f)
