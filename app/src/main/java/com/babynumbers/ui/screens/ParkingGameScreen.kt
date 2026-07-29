@@ -216,7 +216,7 @@ fun ParkingGameScreen(
                                 .size(220.dp, 180.dp)
                                 .scale(scale)
                                 .shadow(
-                                    elevation = if (isSelected) 28.dp else 6.dp,
+                                    elevation = if (isSelected) 12.dp else 6.dp,
                                     shape = RoundedCornerShape(16.dp)
                                 )
                                 .clip(RoundedCornerShape(16.dp))
