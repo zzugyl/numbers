@@ -28,6 +28,7 @@ fun HomeScreen(
     viewModel: LearningViewModel = hiltViewModel()
 ) {
     val uiState by viewModel.uiState.collectAsState()
+    val unlockedStages by viewModel.unlockedStages.collectAsState()
 
     Box(
         modifier = Modifier
@@ -74,12 +75,13 @@ fun HomeScreen(
             ) {
                 items(4) { index ->
                     val stageNumber = index + 1
+                    val isUnlocked = unlockedStages.contains(stageNumber)
                     StageSelector(
                         stageNumber = stageNumber,
                         progress = viewModel.getStageProgress(stageNumber),
-                        isUnlocked = viewModel.isStageUnlocked(stageNumber),
+                        isUnlocked = isUnlocked,
                         onClick = {
-                            if (viewModel.isStageUnlocked(stageNumber)) {
+                            if (isUnlocked) {
                                 onStageSelected(stageNumber)
                             }
                         }

@@ -33,6 +33,10 @@ class LearningViewModel @Inject constructor(
     private val _uiState = MutableStateFlow(LearningUiState())
     val uiState: StateFlow<LearningUiState> = _uiState.asStateFlow()
 
+    // 已解锁的阶段集合
+    private val _unlockedStages = MutableStateFlow<Set<Int>>(setOf(1))
+    val unlockedStages: StateFlow<Set<Int>> = _unlockedStages.asStateFlow()
+
     init {
         // AudioPlayer 无需初始化，直接可用
         _uiState.value = _uiState.value.copy(isTtsReady = true)
@@ -55,8 +59,31 @@ class LearningViewModel @Inject constructor(
         viewModelScope.launch {
             repository.completedNumbers.collect { numbers ->
                 _uiState.value = _uiState.value.copy(completedNumbers = numbers)
+                updateUnlockedStages(numbers)
             }
         }
+    }
+
+    private fun updateUnlockedStages(completedNumbers: Set<Int>) {
+        val unlocked = mutableSetOf<Int>(1) // Stage 1 总是解锁
+
+        // 检查 Stage 2-4 是否解锁
+        for (stage in 2..4) {
+            val prevStage = stage - 1
+            val prevStageNumbers = when (prevStage) {
+                1 -> (1..10).toSet()
+                2 -> (11..20).toSet()
+                3 -> (21..50).toSet()
+                else -> emptySet()
+            }
+
+            val completedInPrevStage = completedNumbers.filter { it in prevStageNumbers }.size
+            if (completedInPrevStage >= prevStageNumbers.size) {
+                unlocked.add(stage)
+            }
+        }
+
+        _unlockedStages.value = unlocked
     }
 
     fun setLanguage(language: String) {
@@ -126,6 +153,6 @@ class LearningViewModel @Inject constructor(
     }
 
     fun isStageUnlocked(stage: Int): Boolean {
-        return true
+        return _unlockedStages.value.contains(stage)
     }
 }
