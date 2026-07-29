@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- 葫芦把手（细长茎） -->
+    <path
+        android:fillColor="#5D8A3C"
+        android:pathData="M54,6 L53,6 Q52,6 52,7 L52,20 Q52,22 54,22 Q56,22 56,20 L56,7 Q56,6 55,6 Z"/>
+    <!-- 葫芦整体（上下一体） -->
+    <path
+        android:fillColor="#8BC34A"
+        android:pathData="M54,22 C46,22 39,28 39,36 C39,42 44,48 50,50 L50,52 C37,54 24,64 24,78 C24,92 37,102 54,102 C71,102 84,92 84,78 C84,64 71,54 58,52 L58,50 C64,48 69,42 69,36 C69,28 62,22 54,22 Z"/>
+    <!-- 葫芦上半部分（小圆，覆盖上半部分） -->
+    <path
+        android:fillColor="#7CB342"
+        android:pathData="M54,22 C46,22 39,28 39,36 C39,44 46,50 54,50 C62,50 69,44 69,36 C69,28 62,22 54,22 Z"/>
+</vector>

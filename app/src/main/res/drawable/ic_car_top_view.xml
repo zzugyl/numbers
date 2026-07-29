@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="180dp"
+    android:height="120dp"
+    android:viewportWidth="180"
+    android:viewportHeight="120">
+    <!-- 左前轮 -->
+    <path
+        android:fillColor="#1A1A1A"
+        android:pathData="M22,8 Q22,2 32,2 L48,2 Q58,2 58,8 L58,22 Q58,28 48,28 L32,28 Q22,28 22,22 Z"/>
+    <path
+        android:fillColor="#444444"
+        android:pathData="M28,12 Q28,8 32,8 L48,8 Q52,8 52,12 L52,18 Q52,22 48,22 L32,22 Q28,22 28,18 Z"/>
+    <!-- 右前轮 -->
+    <path
+        android:fillColor="#1A1A1A"
+        android:pathData="M22,92 Q22,88 32,88 L48,88 Q58,88 58,92 L58,106 Q58,112 48,112 L32,112 Q22,112 22,106 Z"/>
+    <path
+        android:fillColor="#444444"
+        android:pathData="M28,96 Q28,92 32,92 L48,92 Q52,92 52,96 L52,102 Q52,106 48,106 L32,106 Q28,106 28,102 Z"/>
+    <!-- 左后轮 -->
+    <path
+        android:fillColor="#1A1A1A"
+        android:pathData="M122,8 Q122,2 132,2 L148,2 Q158,2 158,8 L158,22 Q158,28 148,28 L132,28 Q122,28 122,22 Z"/>
+    <path
+        android:fillColor="#444444"
+        android:pathData="M128,12 Q128,8 132,8 L148,8 Q152,8 152,12 L152,18 Q152,22 148,22 L132,22 Q128,22 128,18 Z"/>
+    <!-- 右后轮 -->
+    <path
+        android:fillColor="#1A1A1A"
+        android:pathData="M122,92 Q122,88 132,88 L148,88 Q158,88 158,92 L158,106 Q158,112 148,112 L132,112 Q122,112 122,106 Z"/>
+    <path
+        android:fillColor="#444444"
+        android:pathData="M128,96 Q128,92 132,92 L148,92 Q152,92 152,96 L152,102 Q152,106 148,106 L132,106 Q128,106 128,102 Z"/>
+    <!-- 车身主体 -->
+    <path
+        android:fillColor="#FF0000"
+        android:pathData="M32,24 L148,24 Q162,24 162,38 L162,82 Q162,96 148,96 L32,96 Q18,96 18,82 L18,38 Q18,24 32,24 Z"/>
+    <!-- 车顶白色区域 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M50,36 L130,36 Q138,36 138,44 L138,76 Q138,84 130,84 L50,84 Q42,84 42,76 L42,44 Q42,36 50,36 Z"/>
+    <!-- 左前窗 -->
+    <path
+        android:fillColor="#81D4FA"
+        android:pathData="M50,36 L72,36 Q76,36 76,40 L76,80 Q76,84 72,84 L50,84 Q42,84 42,76 L42,44 Q42,36 50,36 Z"/>
+    <!-- 右前窗 -->
+    <path
+        android:fillColor="#81D4FA"
+        android:pathData="M108,36 L130,36 Q138,36 138,44 L138,76 Q138,84 130,84 L108,84 Z"/>
+    <!-- 中间天窗 -->
+    <path
+        android:fillColor="#B3E5FC"
+        android:pathData="M76,40 L104,40 Q108,40 108,44 L108,76 Q108,80 104,80 L76,80 Q72,80 72,76 L72,44 Q72,40 76,40 Z"/>
+    <!-- 引擎盖线条 -->
+    <path
+        android:strokeColor="#CC0000"
+        android:strokeWidth="1.5"
+        android:pathData="M32,44 L50,44 M32,76 L50,76"/>
+    <!-- 后备箱线条 -->
+    <path
+        android:strokeColor="#CC0000"
+        android:strokeWidth="1.5"
+        android:pathData="M130,44 L148,44 M130,76 L148,76"/>
+    <!-- 前车灯 -->
+    <path
+        android:fillColor="#FFEB3B"
+        android:pathData="M20,42 Q17,42 17,45 L17,52 Q17,55 20,55 L28,55 Q31,55 31,52 L31,45 Q31,42 28,42 Z"/>
+    <path
+        android:fillColor="#FFEB3B"
+        android:pathData="M20,65 Q17,65 17,68 L17,75 Q17,78 20,78 L28,78 Q31,78 31,75 L31,68 Q31,65 28,65 Z"/>
+    <!-- 后车灯 -->
+    <path
+        android:fillColor="#F44336"
+        android:pathData="M150,42 Q153,42 153,45 L153,52 Q153,55 150,55 L142,55 Q139,55 139,52 L139,45 Q139,42 142,42 Z"/>
+    <path
+        android:fillColor="#F44336"
+        android:pathData="M150,65 Q153,65 153,68 L153,75 Q153,78 150,78 L142,78 Q139,78 139,75 L139,68 Q139,65 142,65 Z"/>
+</vector>

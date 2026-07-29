@@ -1,0 +1,107 @@
+# Android 项目标准 .gitignore
+
+# Gradle
+.gradle/
+build/
+*/build/
+
+# 本地配置文件
+local.properties
+*.keystore
+*.jks
+
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+.DS_Store
+
+# Android Studio Navigation Editor temp files
+.navigation/
+
+# APK
+*.apk
+*.ap_
+*.aab
+
+# Proguard
+proguard/
+proguard-project.txt
+
+# Log Files
+*.log
+
+# Android Studio Profiler
+*.hprof
+
+# Keystore files
+*.jks
+
+# Google Services
+google-services.json
+
+# Firebase
+firebase-debug.log
+
+# Android Virtual Devices
+*.avd
+*.avd/
+
+# lint
+lint-report.html
+lint-report_files/
+
+# External Native Build Folder
+.cxx/
+.externalNativeBuild/
+
+# Version Control
+.svn/
+
+# OS
+Thumbs.db
+
+# macOS
+.DS_Store
+
+# Windows
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# Temporary files
+*.tmp
+*.temp
+
+# Test reports
+test-results/
+coverage/
+
+# Jacoco
+jacoco.exec
+jacoco/
+
+# Android Keystore
+*.keystore
+
+# Crashlytics
+com_crashlytics_export_strings.xml
+
+# Fabric
+fabric.properties
+
+# Google API keys (如果有)
+api_key.txt
+
+# Keystore
+release.keystore
+
+# External libraries
+libs/
+
+# NDK
+obj/
+objd/
