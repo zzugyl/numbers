@@ -1,17 +1,14 @@
 package com.babynumbers.ui.components
 
-import androidx.compose.animation.core.animateFloatAsState
-import androidx.compose.animation.core.spring
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.*
-import androidx.compose.runtime.*
+import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.draw.scale
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
@@ -27,19 +24,8 @@ fun LanguageToggle(
     currentLanguage: String,
     onLanguageChanged: (String) -> Unit
 ) {
-    var isPressed by remember { mutableStateOf(false) }
-    val scale by animateFloatAsState(
-        targetValue = if (isPressed) 0.95f else 1f,
-        animationSpec = spring(
-            dampingRatio = 0.3f,
-            stiffness = 300f
-        ),
-        label = "scale"
-    )
-
     Row(
-        modifier = Modifier
-            .scale(scale),
+        modifier = Modifier,
         horizontalArrangement = Arrangement.spacedBy(32.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
@@ -63,7 +49,6 @@ fun LanguageToggle(
                     )
                 )
                 .clickable {
-                    isPressed = true
                     onLanguageChanged(Constants.LANGUAGE_CHINESE)
                 },
             contentAlignment = Alignment.Center
@@ -99,7 +84,6 @@ fun LanguageToggle(
                     )
                 )
                 .clickable {
-                    isPressed = true
                     onLanguageChanged(Constants.LANGUAGE_ENGLISH)
                 },
             contentAlignment = Alignment.Center
